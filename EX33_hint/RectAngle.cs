@@ -4,6 +4,7 @@ using System.Text;
 
 namespace EX33_hint
 {
+    //先生の見ながらやりました
     class RectAngle : ISurface, ICircumference, IBounds
     {
         readonly public float width;
@@ -33,13 +34,46 @@ namespace EX33_hint
                 || rectAngle1.width == rectAngle2.height
                 && rectAngle1.height == rectAngle2.width;
         }
-        
+
         public static bool operator !=(RectAngle rectAngle1, RectAngle rectAngle2)
         {
-            return !(rectAngle1.width == rectAngle2.width
+            return rectAngle1.width == rectAngle2.width
                 && rectAngle1.height == rectAngle2.height
                 || rectAngle1.width == rectAngle2.height
-                && rectAngle1.height == rectAngle2.width);
+                && rectAngle1.height == rectAngle2.width;
+        }
+
+        public static RectAngle operator +(RectAngle rectAngle1, RectAngle rectAngle2)
+        {
+            RectAngle rectAngleVirtical;
+            RectAngle rectAngleHorizontal;
+            if (rectAngle1.width>rectAngle2.width)
+            {
+                rectAngleVirtical = new RectAngle(rectAngle1.width,rectAngle1.height+rectAngle2.height);
+            }
+            else
+            {
+                rectAngleVirtical = new RectAngle(rectAngle2.width, rectAngle1.height + rectAngle2.height);
+            }
+            if (rectAngle1.height>rectAngle2.height)
+            {
+                rectAngleHorizontal = new RectAngle(rectAngle1.height, rectAngle1.width + rectAngle2.width);
+            }
+            else
+            {
+                rectAngleHorizontal = new RectAngle(rectAngle2.height, rectAngle1.width + rectAngle2.width);
+            }
+            RectAngle result;
+            if (rectAngleVirtical.GetSurface()<rectAngleHorizontal.GetSurface())
+            {
+                result = rectAngleVirtical;
+            }
+            else
+            {
+                result = rectAngleHorizontal;
+            }
+            return result;
+           
         }
     }
 }

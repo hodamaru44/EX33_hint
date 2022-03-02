@@ -20,6 +20,8 @@ namespace EX33_hint
             }
             var rcetAngle3 = rectAngle1 + rectAngle2;
             Console.WriteLine($"rectAngle1 + rectAngle2={rcetAngle3.width},{rcetAngle3.height}");
+            var rctAngle4 = rectAngle1 + rectAngle2;
+            Console.WriteLine($"rectAngle1 + rectAngle2={rcetAngle3.height},{rcetAngle3.width}");
         }
     }
 }

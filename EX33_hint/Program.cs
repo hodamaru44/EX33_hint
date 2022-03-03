@@ -7,9 +7,11 @@ namespace EX33_hint
         //先生の見ながらやりました
         static void Main(string[] args)
         {
-            RectAngle rectAngle1 = new RectAngle(10, 10);
-            RectAngle rectAngle2 = new RectAngle(10, 10);
-            
+            RectAngle rectAngle1 = new RectAngle(InputClass.InputFloat("幅："),
+                 InputClass.InputFloat("高さ："));
+            RectAngle rectAngle2 = new RectAngle(InputClass.InputFloat("幅："),
+                 InputClass.InputFloat("高さ："));
+
             if (rectAngle1 == rectAngle2)
             {
                 Console.WriteLine("rectAngle1とrectAngle2は等しい");

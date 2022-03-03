@@ -12,17 +12,23 @@ namespace EX33_hint
             return Console.ReadLine();
         }
 
-        public static float InputFloat(string message = "値を入力してください")
+        public static float InputFloat(string value, string message = "値を入力してください" )
         {
-            //Console.WriteLine(message);
+
+           
             float i;
             while (true)
             {
-                if (float.TryParse(InputString(message), out i))
+                Console.WriteLine(message);
+                if (float.TryParse(InputString(value), out i))
                 {
                     break;
                 }
-              
+                else
+                {
+                    Console.WriteLine("入力エラー！");
+                }
+
             }
             return i;
         }

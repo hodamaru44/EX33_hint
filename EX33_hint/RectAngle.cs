@@ -73,7 +73,7 @@ namespace EX33_hint
                 result = rectAngleHorizontal;
             }
             return result;
-           
         }
+        
     }
 }

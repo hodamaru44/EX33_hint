@@ -14,8 +14,6 @@ namespace EX33_hint
 
         public static float InputFloat(string value, string message = "値を入力してください" )
         {
-
-           
             float i;
             while (true)
             {

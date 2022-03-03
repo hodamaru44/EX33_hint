@@ -11,6 +11,8 @@ namespace EX33_hint
                  InputClass.InputFloat("高さ："));
             RectAngle rectAngle2 = new RectAngle(InputClass.InputFloat("幅："),
                  InputClass.InputFloat("高さ："));
+            RectAngle rectAngle3 = new RectAngle(5,8);
+
 
             if (rectAngle1 == rectAngle2)
             {
@@ -20,10 +22,10 @@ namespace EX33_hint
             {
                 Console.WriteLine("rectAngle1とrectAngle2は等しくない");
             }
-            var rcetAngle3 = rectAngle1 + rectAngle2;
-            Console.WriteLine($"rectAngle1 + rectAngle2={rcetAngle3.width},{rcetAngle3.height}");
-            var rctAngle4 = rectAngle1 + rectAngle2;
-            Console.WriteLine($"rectAngle1 + rectAngle2={rcetAngle3.height},{rcetAngle3.width}");
+            var rcetAngle4 = rectAngle1 + rectAngle2;
+            Console.WriteLine($"rectAngle1 + rectAngle2={rcetAngle4.width},{rcetAngle4.height}");
+            var rcetAngle5 = rectAngle1 + rectAngle3;
+            Console.WriteLine($"rectAngle1 + rectAngle3={rcetAngle5.height},{rcetAngle5.width}");
         }
     }
 }
